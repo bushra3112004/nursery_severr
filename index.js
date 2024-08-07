@@ -21,9 +21,7 @@ app.use(express.json());
 const dbConnection = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URL, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useCreateIndex: true // Ensure index creation in background
+          
         });
         console.log('Mongodb Connected');
     } catch (error) {
